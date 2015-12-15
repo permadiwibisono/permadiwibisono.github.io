@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <style type="text/css">
+    body{
+      background-color: black;
+    }
+    h1{
+
+      font-family: 'Roboto';
+    }
+    .footer {
+      height: 70px;
+      bottom: 0;
+      width: 100%;
+      border: none;
+      font-size: 10px;
+      text-align: center;
+      padding-top:0; 
+    }
+    .jumbotron {
+      margin: 0;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      height : 60vh;
+    }
+    .jumbotron .title{
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 70px;
+      font-weight: 700px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+
+    }
+    .title2{
+      text-align:center;
+      color: white;
+      font-size: 30px;
+      padding: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .panel
+    {
+      width:100%;
+      color:white; background-color:black;
+      margin: 0;
+    }
+    .lingkaran{
+        width:200px; 
+        height:200px; 
+        border-radius:50%; 
+        color:white; 
+        margin:50px auto;
+        background-color:black;
+        position:relative;
+
+    }
+    .lingkaran > .title{
+
+      font-weight:bold;
+      position:absolute; 
+      top:30%; 
+      left:50%; 
+      transform:translate(-50%,-30%);
+    }
+    .featurette-divider {
+  margin: 40px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+    </style>
+    <!-- endbuild -->
+  </head>
+  <body ng-app="mywebApp" ng-controller="HomeCtrl">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    
+    <page-info info='Hello'></page-info>
+     <div class="container-fluid" style="background-color:white;width:100%;">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-5">
+            <lingkaran style="font-size:70px">PW</lingkaran>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-7">
+              </br>
+              </br>
+              </br>
+              <h2 >Permadi Wibisono <span class="text-muted"> (n)</span></h2>
+              <p class="lead">Tangible. Actually, I'm coder, 'Mahasiswa Tingkat Akhir' and I have a startup to build our product pickkado</p>
+              </div                                          >
+          </div>
+        </div>
+     </div>
+    <page-info info='Experienced'></page-info>
+    <div class="container-fluid" style="text-align:center;background-color:white">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4" style="text-align:center; " ng-repeat="exp in experiences">
+          <lingkaran  >{{exp.isi}}</lingkaran>
+        </div>
+      </div>
+    </div>
+    <page-info info='Projects'></page-info>
+    <div class="container-fluid" style="background-color:white">
+      <hr class="featurette-divider">
+      <div class="row " style="margin:0 10px;">
+        <div class="col-xs-12 col-md-3">
+          <h2 class="featurette-heading">SALLY SIZZLE. <span class="text-muted">3 match puzzle games dari Sour Sally</span></h2>
+          <p class="lead">
+            Gua bersama Major Glasses mendeveloped Sally Sizzle, dimana game ini bergenre 3 match puzzle.
+            Adapun downloadernya hingga sekarang sudah mencapai lebih dari 10.000 downloader dari iOS dan Android user.
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <img class="featurette-image" src="images/projects/sallysizzle-mobile.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <h2 class="featurette-heading">PUYO PLAY. <span class="text-muted">Mini Games dari PUYO</span></h2>
+          <p class="lead">
+            Gua bersama Major Glasses mendeveloped PUYO PLAY, dimana game ini bergenre mini games, jadi dalam aplikasi ini terdapat lebih dari satu game.
+            PUYO PLAY terdapat 3 games yang sudah tersedia PUYO TOWER, JUNGLE SMASH, PUYO FLY.
+            PUYO PLAY sekarang masih BETA VERSION di iOS dan Android.
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <img class="featurette-image" src="images/projects/puyoplay-mobile.png" alt="Generic placeholder image">
+        </div>
+      </div>
+      <hr class="featurette-divider"> 
+    </div>
+    <page-info info='Contact'></page-info>
+    <div class="footer" style="background-color:black;color:white">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <a href="https://www.facebook.com/permadiwibisono30">
+                <img style="width:20px; height:20px; margin:5px 0;" src="images/icon/fb.png">
+              </a>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <a href="https://www.twitter.com/mbapewe">
+                <img style="width:20px; height:20px; margin:10px 0;" src="images/icon/twitter.png">
+              </a>
+          </div> 
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <a href="https://www.instagram.com/permadiwibisono">
+                <img style="width:20px; height:20px; margin:10px 0;" src="images/icon/instagram.png">
+              </a>
+          </div>
+        </div>
+       <span >Menara Top Food, 6th Floor, Jalur Sutera Barat Street Number 3. email: mbapewe@gmail.com</span>
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
