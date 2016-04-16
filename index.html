@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>permadiwibisono</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+      <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/vendor-d40f8773d0.css">
+    <link rel="stylesheet" href="styles/main-396b865b63.css">
+  </head>
+  <body ng-app="mywebApp" ng-controller="HomeCtrl">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    
+    <page-info info='Hello'></page-info>
+     <div class="container-fluid" style="background-color:white;width:100%;">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-5 wow tada">
+            <lingkaran style="font-size:70px">PW</lingkaran>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-7 wow fadeIn" data-wow-delay="0.5s">
+              </br>
+              </br>
+              </br>
+              <h2 >Permadi Wibisono <span class="text-muted"> (n)</span></h2>
+              <p class="lead">Tangible. Actually, I'm coder, 'Mahasiswa Tingkat Akhir' and I have a startup to build our product pickkado</p>
+              </div                                          >
+          </div>
+        </div>
+     </div>
+    <page-info info='Experienced'></page-info>
+    <div class="container-fluid" style="text-align:center;background-color:white">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4" style="text-align:center; " ng-repeat="exp in experiences">
+          <lingkaran  >{{exp.isi}}</lingkaran>
+        </div>
+      </div>
+    </div>
+    <page-info info='Projects'></page-info>
+    <div class="container-fluid" style="background-color:white">
+      <hr class="featurette-divider">
+      <div class="row " style="margin:0 10px;">
+        <div class="col-xs-12 col-md-3 wow fadeIn" data-wow-delay="3s">
+          <h2 class="featurette-heading">SALLY SIZZLE. <span class="text-muted">3 match puzzle games dari Sour Sally</span></h2>
+          <p class="lead">
+            Gua bersama Major Glasses mendeveloped Sally Sizzle, dimana game ini bergenre 3 match puzzle.
+            Adapun downloadernya hingga sekarang sudah mencapai lebih dari 10.000 downloader dari iOS dan Android user.
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-3 wow slideInLeft" data-wow-delay="2s">
+          <img class="featurette-image" src="images/projects/sallysizzle-mobile.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-xs-12 col-md-3 wow fadeIn" data-wow-delay="1s">
+          <h2 class="featurette-heading">PUYO PLAY. <span class="text-muted">Mini Games dari PUYO</span></h2>
+          <p class="lead">
+            Gua bersama Major Glasses mendeveloped PUYO PLAY, dimana game ini bergenre mini games, jadi dalam aplikasi ini terdapat lebih dari satu game.
+            PUYO PLAY terdapat 3 games yang sudah tersedia PUYO TOWER, JUNGLE SMASH, PUYO FLY.
+            PUYO PLAY sekarang masih BETA VERSION di iOS dan Android.
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-3 wow slideInLeft" >
+          <img class="featurette-image" src="images/projects/puyoplay-mobile.png" alt="Generic placeholder image">
+        </div>
+      </div>
+      <hr class="featurette-divider"> 
+    </div>
+    <page-info info='Contact'></page-info>
+    <div id="instafeed"> </div>
+    <div class="footer" style="background-color:black;color:white">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <a href="https://www.facebook.com/permadiwibisono30">
+                <img style="width:20px; height:20px; margin:5px 0;" src="images/icon/fb.png">
+              </a>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <a href="https://www.twitter.com/mbapewe">
+                <img style="width:20px; height:20px; margin:10px 0;" src="images/icon/twitter.png">
+              </a>
+          </div> 
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <a href="https://www.instagram.com/permadiwibisono">
+                <img style="width:20px; height:20px; margin:10px 0;" src="images/icon/instagram.png">
+              </a>
+          </div>
+        </div>
+       <span >Menara Top Food, 6th Floor, Jalur Sutera Barat Street Number 3. email: mbapewe@gmail.com</span>
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <script src="scripts/vendor-22bf4277f7.js"></script>
+
+        <script src="scripts/scripts-919602c78b.js"></script>
+
+</body>
+</html>
