@@ -8,6 +8,9 @@ import "../../assets/styles/dark-mode-toggle.scss";
 // source: https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature
 const DarkToggle = () => {
   const { colorMode, setColorMode } = useTheme();
+
+  if (!colorMode) return null;
+
   return (
     <div className="switch-container cursor-pointer">
       <input

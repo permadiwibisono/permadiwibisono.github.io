@@ -25,7 +25,7 @@ const MagicScriptTag = () => {
   }
   const colorMode = getInitialColorMode();
   const root = document.documentElement;
-  root.setAttribute("data-theme", colorMode);
+  root.setAttribute('data-initial-theme', colorMode);
 })()
   `;
   // eslint-disable-next-line react/no-danger
