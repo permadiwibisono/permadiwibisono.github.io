@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-color: #fff;
+  --text-color: #111;
+  &[data-theme="dark"] {
+    --bg-color: #111;
+    --text-color: #fff;
+  }
+}
+
 body {
-  background-color: #111;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: Inconsolata, Lato, -apple-system, Roboto, sans-serif, serif;
 }
