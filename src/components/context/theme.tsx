@@ -1,4 +1,10 @@
-import React, { createContext, ReactNode, useState } from "react";
+import React, {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 //source: https://www.joshwcomeau.com/react/dark-mode/
 export function getInitialColorMode() {
@@ -26,10 +32,16 @@ interface IThemeContext {
   setColorMode: (value: string) => void;
 }
 
-export const ThemeContext = createContext({} as IThemeContext);
+export const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [colorMode, rawSetColorMode] = useState(getInitialColorMode);
+  const [colorMode, rawSetColorMode] = useState("light");
+
+  useEffect(() => {
+    const val = getInitialColorMode();
+    rawSetColorMode(val);
+  }, []);
+
   const setColorMode = (value: string) => {
     rawSetColorMode(value);
     // Persist it on update
@@ -42,4 +54,8 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
       {children}
     </ThemeContext.Provider>
   );
+};
+
+export const useTheme = () => {
+  return useContext(ThemeContext);
 };

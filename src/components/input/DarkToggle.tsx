@@ -1,14 +1,13 @@
 import React from "react";
 import { Moon, Sun } from "react-bootstrap-icons";
 
-import { ThemeContext } from "../context/theme";
+import { useTheme } from "../context/theme";
 
 import "../../assets/styles/dark-mode-toggle.scss";
 
 // source: https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature
-
 const DarkToggle = () => {
-  const { colorMode, setColorMode } = React.useContext(ThemeContext);
+  const { colorMode, setColorMode } = useTheme();
   return (
     <div className="switch-container cursor-pointer">
       <input
