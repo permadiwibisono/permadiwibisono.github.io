@@ -4,15 +4,12 @@ function useWindowHeight() {
   const [height, setHeight] = useState<number>(1);
 
   useEffect(() => {
-    const vh = window.innerHeight * 0.01;
-    setHeight(vh);
-  }, []);
-
-  useEffect(() => {
     function resizeHandler() {
       const vh = window.innerHeight * 0.01;
       setHeight(vh);
     }
+    resizeHandler();
+
     window.addEventListener("resize", resizeHandler);
     return () => {
       window.removeEventListener("resize", resizeHandler);
