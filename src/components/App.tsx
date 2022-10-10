@@ -1,9 +1,8 @@
 import React from "react";
-
-import { ThemeProvider } from "./context/theme";
+import { Provider } from "jotai";
 
 function App({ children }: { children: React.ReactNode }) {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return <Provider>{children}</Provider>;
 }
 
 export default App;
