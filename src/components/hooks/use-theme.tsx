@@ -1,13 +1,10 @@
-import { useEffect } from "react";
-import { atom, useAtom } from "jotai";
+import { useEffect } from 'react';
+import { atom, useAtom } from 'jotai';
 
-const key = "color-mode";
-const browser = typeof window !== "undefined";
-const localValue = browser ? localStorage.getItem(key) : "light";
-const systemTheme =
-  browser && matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+const key = 'color-mode';
+const browser = typeof window !== 'undefined';
+const localValue = browser ? localStorage.getItem(key) : 'light';
+const systemTheme = browser && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
 export const themeAtom = atom(localValue || systemTheme);
 
@@ -22,15 +19,15 @@ export default function useTheme() {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    const value = root.getAttribute("data-initial-theme") || undefined;
-    root.setAttribute("data-theme", value || "");
+    const value = root.getAttribute('data-initial-theme') || undefined;
+    root.setAttribute('data-theme', value || '');
   }, []);
 
   useEffect(() => {
     if (!browser) return;
 
     const root = window.document.documentElement;
-    root.setAttribute("data-theme", theme);
+    root.setAttribute('data-theme', theme);
   }, [theme]);
 
   console.log(theme);

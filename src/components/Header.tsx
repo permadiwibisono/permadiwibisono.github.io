@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import DarkToggle from "./input/DarkToggle";
+import DarkToggle from './input/DarkToggle';
 
 const Header = () => {
   return (

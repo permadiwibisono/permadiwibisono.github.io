@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 //source: https://www.joshwcomeau.com/react/dark-mode/
 const MagicScriptTag = () => {

@@ -1,10 +1,10 @@
-import React from "react";
-import { useAtom } from "jotai";
-import { Moon, Sun } from "react-bootstrap-icons";
+import React from 'react';
+import { useAtom } from 'jotai';
+import { Moon, Sun } from 'react-bootstrap-icons';
 
-import useTheme, { setThemeWithStorageAtom } from "../hooks/use-theme";
+import useTheme, { setThemeWithStorageAtom } from '../hooks/use-theme';
 
-import "../../assets/styles/dark-mode-toggle.scss";
+import '../../assets/styles/dark-mode-toggle.scss';
 
 // source: https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature
 const DarkToggle = () => {
@@ -18,9 +18,9 @@ const DarkToggle = () => {
       <input
         id="dark-mode"
         type="checkbox"
-        checked={theme === "dark"}
+        checked={theme === 'dark'}
         onChange={(ev) => {
-          setTheme(ev.target.checked ? "dark" : "light");
+          setTheme(ev.target.checked ? 'dark' : 'light');
         }}
       />
       <label htmlFor="dark-mode">
