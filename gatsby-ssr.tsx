@@ -1,4 +1,5 @@
 import React from 'react';
+import type { GatsbySSR } from 'gatsby';
 
 //source: https://www.joshwcomeau.com/react/dark-mode/
 const MagicScriptTag = () => {
@@ -32,6 +33,6 @@ const MagicScriptTag = () => {
   return <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />;
 };
 
-export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents(<MagicScriptTag key="magic-script" />);
+export const onRenderBody: GatsbySSR['onRenderBody'] = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([<MagicScriptTag key="magic-script" />]);
 };
