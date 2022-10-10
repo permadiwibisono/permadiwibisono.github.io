@@ -1,24 +1,26 @@
 import React from "react";
+import { useAtom } from "jotai";
 import { Moon, Sun } from "react-bootstrap-icons";
 
-import { useTheme } from "../context/theme";
+import useTheme, { setThemeWithStorageAtom } from "../hooks/use-theme";
 
 import "../../assets/styles/dark-mode-toggle.scss";
 
 // source: https://daveyhert.hashnode.dev/how-to-create-animated-toggle-switches-with-just-css-and-implement-a-dark-mode-feature
 const DarkToggle = () => {
-  const { colorMode, setColorMode } = useTheme();
+  const [theme] = useTheme();
+  const [_, setTheme] = useAtom(setThemeWithStorageAtom);
 
-  if (!colorMode) return null;
+  if (!theme) return null;
 
   return (
     <div className="switch-container cursor-pointer">
       <input
         id="dark-mode"
         type="checkbox"
-        checked={colorMode === "dark"}
+        checked={theme === "dark"}
         onChange={(ev) => {
-          setColorMode(ev.target.checked ? "dark" : "light");
+          setTheme(ev.target.checked ? "dark" : "light");
         }}
       />
       <label htmlFor="dark-mode">
