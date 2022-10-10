@@ -29,6 +29,7 @@ module.exports = {
         varsIgnorePattern: '^_',
         caughtErrorsIgnorePattern: '^_'
       }
-    ]
+    ],
+    'prettier/prettier': 'warn'
   }
 };
