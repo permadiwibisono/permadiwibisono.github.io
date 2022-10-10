@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 function useWindowHeight() {
   const [height, setHeight] = useState<number>();
@@ -9,9 +9,9 @@ function useWindowHeight() {
       setHeight(vh);
     }
     resizeHandler();
-    window.addEventListener("resize", resizeHandler);
+    window.addEventListener('resize', resizeHandler);
     return () => {
-      window.removeEventListener("resize", resizeHandler);
+      window.removeEventListener('resize', resizeHandler);
     };
   }, []);
   return { height };

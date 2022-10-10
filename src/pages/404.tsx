@@ -1,12 +1,12 @@
-import * as React from "react";
-import { Link, HeadFC } from "gatsby";
-import Layout from "../components/Layout";
+import * as React from 'react';
+import { Link, HeadFC } from 'gatsby';
+import Layout from '../components/Layout';
 
 const codeStyles = {
-  color: "#8A6534",
+  color: '#8A6534',
   padding: 4,
-  backgroundColor: "#FFF4DB",
-  borderRadius: 4,
+  backgroundColor: '#FFF4DB',
+  borderRadius: 4
 };
 
 const NotFoundPage = () => {
@@ -17,7 +17,7 @@ const NotFoundPage = () => {
         <p className="text-lg">
           Sorry 😔, we couldn’t find what you were looking for.
           <br />
-          {process.env.NODE_ENV === "development" ? (
+          {process.env.NODE_ENV === 'development' ? (
             <>
               <br />
               Try creating a page in <code style={codeStyles}>src/pages/</code>.
@@ -25,10 +25,7 @@ const NotFoundPage = () => {
             </>
           ) : null}
           <br />
-          <Link
-            to="/"
-            className="border border-black dark:border-white px-4 py-2"
-          >
+          <Link to="/" className="border border-black dark:border-white px-4 py-2">
             Go home
           </Link>
         </p>
